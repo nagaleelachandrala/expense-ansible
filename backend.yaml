@@ -4,7 +4,7 @@
   tasks:
   - name: disable current nodejs
     ansible.builtin.command: dnf module disable nodejs -y
-
+  
   - name: enable nodejs 20
     ansible.builtin.command: dnf module enable nodejs:20 -y
 
@@ -58,6 +58,6 @@
       state: import
       name: all
       login_user: root
-      login-password: ExpenseApp@1
+      login_password: ExpenseApp@1
       login_user: mysql.eashan.online
       target: /app/schema/backend.sql
